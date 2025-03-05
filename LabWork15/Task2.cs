@@ -1,3 +1,4 @@
+delegate int MathOperations(int x);
 MathOperation mathOperations = (a, b) => Console.WriteLine($"Сумма: {a + b}");
 mathOperations += (a, b) => Console.WriteLine($"Разность: {a - b}");
 mathOperations += (a, b) => Console.WriteLine($"Произведение: {a * b}");
