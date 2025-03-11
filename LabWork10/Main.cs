@@ -1,3 +1,17 @@
+Product[] products =
+{
+    new ("Химия", "Антисептик",150),
+    new ("Химия","Бром",80),
+    new ("Химия", "Парацетамол",120)
+};
+
+foreach (var product in products)
+    product.PrintFullInfo();
+Array.Sort(products);
+Console.WriteLine();
+foreach (var product in products)
+    product.PrintFullInfo();
+
 Product product1 = new("Химия", "Антисептик", 150);
 Product product2 = new("Химия", "Порошок", 80);
 Product product3 = new("Химия", "Антисептик", 150);
