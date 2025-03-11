@@ -15,9 +15,9 @@ Console.WriteLine($"Всего элементов в списке {cars.Count}")
 Dictionary<int, string> dictionary = new()
 {
     {1,"Мыло" },
-    {2,"Шампюнь" },
+    {2,"Шампунь" },
     {3,"Гель" },
-    {4,"Мачалка" },
+    {4,"Мочалка" },
 };
 Console.WriteLine("\nВведите количество добовляемых элементов в словарь");
 int productsCount = int.Parse(Console.ReadLine());
