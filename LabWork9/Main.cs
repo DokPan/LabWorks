@@ -7,7 +7,7 @@ figura.Print();
 Console.WriteLine();
 
 IPrinter printer;
-printer = new Product("Химия", "Поршок", 80);
+printer = new Product("Химия", "Порошок", 80);
 printer.Print();
 Console.WriteLine();
 printer = new Rectangle(4, 2,"Прямоугольник");
