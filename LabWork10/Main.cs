@@ -1,3 +1,4 @@
+Product product1 = new("Химия", "Антисептик", 150);
 Product product2 = new("Химия", "Порошок", 80);
 Product product3 = new("Химия", "Антисептик", 150);
 Console.WriteLine();
