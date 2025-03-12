@@ -21,16 +21,19 @@ var task2 = files
 int task2_2 = files.Count(f => f.Name.Equals("LabWork10.sln", StringComparison.OrdinalIgnoreCase))
     .Dump();
 
-var task3 = files
+var task3_1 = files
     .Select(f => f.Extension)
-    .Distinct()
-    .Select(g => new { Extension = g.Key, Count = g.Count() })
+	.Distinct()
     .Dump();
 
+var task3_2 = files
+    .GroupBy(f => f.Extension)
+	.Select(g => new { Extension = g.Key, FilesCount = g.Count() })
+    .Dump();
+	
 var task4 = files
     .Where(f => f.CreationTime.Date == DateTime.Today)
     .OrderByDescending(f => f.CreationTime)
-    .Select(f => new { f.Name, f.CreationTime })
     .Take(10)
     .Dump();
 
