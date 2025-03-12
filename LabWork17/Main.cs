@@ -8,44 +8,40 @@ if (!directory.Exists)
 }
 
 var task1 = files
-    .Select(x => new { x.Name, x.DirectoryName, x.Length, x.CreationTime })
-    .OrderBy(x => x.Name)
-    .ThenByDescending(x => x.CreationTime)
-    //.Dump(); 
-string searchText = "example";
-var task2 = files
-    .Where(x => x.Name.Contains(searchText))
-    .Select(x => x.Name)
-    //.Dump(); 
+    .Select(f => new { f.Name, f.DirectoryName, f.Length, f.CreationTime })
+    .OrderBy(f => f.Name)
+    .ThenByDescending(f => f.CreationTime)
+    .Dump();
 
-string fileName = "document.txt";
-int task2_2 = files.Count(x => x.Name.Equals(fileName, StringComparison.OrdinalIgnoreCase))
-    //.Dump(); 
+var task2 = files
+    .Where(f => f.Name.Contains("LabWork", StringComparison.OrdinalIgnoreCase))
+    .Select(f => f.Name)
+    .Dump();
+
+int task2_2 = files.Count(f => f.Name.Equals("LabWork10.sln", StringComparison.OrdinalIgnoreCase))
+    .Dump();
 
 var task3 = files
-    .Select(x => x.Extension)
+    .Select(f => f.Extension)
     .Distinct()
-    //.Dump(); 
+    .Select(g => new { Extension = g.Key, Count = g.Count() })
+    .Dump();
 
-var task3_2 = files
-    .GroupBy(x => x.Extension)
-    .Select(y => new { Extension = y.Key, Count = y.Count() })
-    //.Dump(); 
-
-var today = DateTime.Today;
 var task4 = files
-    .Where(x => x.CreationTime.Date == today)
-    .OrderByDescending(x => x.CreationTime)
+    .Where(f => f.CreationTime.Date == DateTime.Today)
+    .OrderByDescending(f => f.CreationTime)
+    .Select(f => new { f.Name, f.CreationTime })
     .Take(10)
-    //.Dump(); 
-    
-var task5 = files.Select(x => new
-{
-    x.Name,
-    x.Extension,
-    x.FullName,
-    Size = x.Length < (1 << 10) ? $"{x.Length} Б" :
-           x.Length < (1 << 20) ? $"{x.Length >> 10} КБ" :
-           $"{x.Length >> 20} МБ"
-})
-    //.Dump();
+    .Dump();
+
+var task5 = files
+    .Select(f => new
+    {
+        f.Name,
+        f.Extension,
+        f.FullName,
+        Size = f.Length < (1 << 10) ? $"{f.Length} Б" :
+           f.Length < (1 << 20) ? $"{f.Length >> 10} КБ" :
+           $"{f.Length >> 20} МБ"
+    })
+    .Dump();
