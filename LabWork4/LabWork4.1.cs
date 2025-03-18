@@ -1,4 +1,3 @@
-int[] coins = { 10, 5, 2, 1 };
 Console.Write("Введите сумму для сдачи: ");
 int amount =30;
 
@@ -7,7 +6,7 @@ if (amount < 0)
     Console.Write("Некорректная сумма");
     return;
 }
-List<int> result = Change(coins, amount);
+List<int> result = Change(amount);
 
 if (result.Count > 0)
 {
@@ -18,8 +17,9 @@ if (result.Count > 0)
 else
     Console.WriteLine("Сдача невозможна");
 
-static List<int> Change(int[] coins, int amount)
+static List<int> Change(int amount)
 {
+    int[] coins = { 10, 5, 2, 1 };
     List<int> change = new List<int>();
     foreach (int coin in coins)
     {
