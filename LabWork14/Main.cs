@@ -9,11 +9,13 @@ if (Regex.IsMatch(phone, pattern))
 else
     Console.WriteLine("Некорректный номер телефона.");
 
+//hi world     !
 Console.Write("Введите строку: ");
 string input = Console.ReadLine();
 string result = Regex.Replace(input, @"\s{2,}", " ");
 Console.WriteLine($"Результат: {result}");
-//Papirap@papirap.ru
+
+//Papirap@papirap.papirap.ru
 string patternEmail = @"^[A-Za-z0-9_-]+@[A-Za-z0-9-.]*\.[A-Za-z]+$";
 Console.Write("Введите email: ");
 string email = Console.ReadLine();
@@ -21,6 +23,7 @@ if (Regex.IsMatch(email, patternEmail, RegexOptions.IgnoreCase))
     Console.WriteLine("Email корректный.");
 else
     Console.WriteLine("Некорректный email.");
+
 //Papirap34.345
 string patternPassword = @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[.?!]).{6,}$";
 while (true)
@@ -36,6 +39,7 @@ while (true)
         Console.WriteLine("Пароль не соответствует требованиям! Попробуйте снова.");
 }
 
+//12.12.12 13/14/1978
 string patternData = @"\b(?<day>\d{1,2})[./](?<month>\d{1,2})[./](?<year>\d{2,4})\b";
 Console.Write("Введите строку с датами: ");
 string data = Console.ReadLine();
