@@ -1,4 +1,6 @@
-delegate int MathOperations(int x);
+//отдельный файл
+delegate void MathOperations(int x,int y);
+//
 MathOperation mathOperations = (a, b) => Console.WriteLine($"Сумма: {a + b}");
 mathOperations += (a, b) => Console.WriteLine($"Разность: {a - b}");
 mathOperations += (a, b) => Console.WriteLine($"Произведение: {a * b}");
