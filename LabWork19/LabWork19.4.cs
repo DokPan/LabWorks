@@ -53,7 +53,7 @@ class OctalObserver : Observer
 // DemicalObserver.cs
 class DemicalObserver : Observer
 {
-    public DecimalObserver(Subject subject) : base(subject) { }
+    public DemmicalObserver(Subject subject) : base(subject) { }
     public override void Update(int state) => Console.WriteLine("Demical String: " + Convert.ToString(_subject.GetState(), 10).ToUpper());
 }
 //
