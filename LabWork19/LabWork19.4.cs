@@ -1,33 +1,29 @@
 // Observer.cs
-abstract class Observer
+class Observer
 {
-    protected Subject? _subject;
-    public abstract void Update();
+    protected Subject _subject;
+    public Observer(Subject subject)
+    {
+        _subject = subject;
+        _subject.StateChanged += Update;
+    }
+    public virtual void Update(int state) { }
+    
 }
 //
 
 // Subject.cs
 class Subject
 {
-    private List<Observer> observers = new();
     private int _state;
+    public event Action<int>? StateChanged;
 
     public int GetState() => _state;
 
     public void SetState(int state)
     {
         _state = state;
-        NotifyAllObservers();
-    }
-
-    public void Attach(Observer observer) => observers.Add(observer);
-
-    public void NotifyAllObservers()
-    {
-        foreach (Observer observer in observers)
-        {
-            observer.Update();
-        }
+        StateChanged?.Invoke(_state);
     }
 }
 //
@@ -35,12 +31,8 @@ class Subject
 // BinaryObserver.cs
 class BinaryObserver : Observer
 {
-    public BinaryObserver(Subject subject)
-    {
-        _subject = subject;
-        _subject.Attach(this);
-    }
-    public override void Update()
+    public BinaryObserver(Subject subject) : base(subject) { }
+    public override void Update(int state)
     {
         Console.WriteLine("Binary String: " + Convert.ToString(_subject.GetState(), 2));
     }
@@ -50,12 +42,8 @@ class BinaryObserver : Observer
 // OctalObserver.cs
 class OctalObserver : Observer
 {
-    public OctalObserver(Subject subject)
-    {
-        _subject = subject;
-        _subject.Attach(this);
-    }
-    public override void Update()
+    public OctalObserver(Subject subject) : base(subject) { }
+    public override void Update(int state)
     {
         Console.WriteLine("Octal String: " + Convert.ToString(_subject.GetState(), 8));
     }
@@ -65,24 +53,16 @@ class OctalObserver : Observer
 // DemicalObserver.cs
 class DemicalObserver : Observer
 {
-    public DemicalObserver(Subject subject)
-    {
-        _subject = subject;
-        _subject.Attach(this);
-    }
-    public override void Update() => Console.WriteLine("Demical String: " + Convert.ToString(_subject.GetState(), 10).ToUpper());
+    public DecimalObserver(Subject subject) : base(subject) { }
+    public override void Update(int state) => Console.WriteLine("Demical String: " + Convert.ToString(_subject.GetState(), 10).ToUpper());
 }
 //
 
 // HexaObserver.cs
 class HexaObserver : Observer
 {
-    public HexaObserver(Subject subject)
-    {
-        _subject = subject;
-        _subject.Attach(this);
-    }
-    public override void Update() => Console.WriteLine("Hex String: " + Convert.ToString(_subject.GetState(),16).ToUpper());
+    public HexaObserver(Subject subject) : base(subject) { }
+    public override void Update(int state) => Console.WriteLine("Hex String: " + Convert.ToString(_subject.GetState(),16).ToUpper());
 }
 //
 
