@@ -1,13 +1,18 @@
-// Вспомогательный класс для расчета стоимости доставки
+// Вспомогательный класс для расчета доставки
 public static class DeliveryCostCalculator
 {
     private const double FreeDeliveryThreshold = 3000;
-    private const double SmallOrderDeliveryCost = 230;
+    private const double FixDeliveryThreshould = 1000;
+    private const double FixDeliveryCost = 230;
 
     public static double CalculateDeliveryCost(Order order)
     {
-        if (order.Total < 1000) return order.Total;
-        if (order.Total < FreeDeliveryThreshold) return SmallOrderDeliveryCost;
+        if (order.Total < FixDeliveryThreshould)
+            return order.Total;
+
+        if (order.Total < FreeDeliveryThreshold)
+            return FixDeliveryCost;
+
         return 0;
     }
 }
