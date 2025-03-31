@@ -1,19 +1,18 @@
 // Сервис для работы с заказами
 public class OrderService
 {
-    private List<Order> orders = new();
+    private List<Order> Orders { get; set; } = [];
 
-    public void AddOrder(Order order) => orders.Add(order);
+    public void AddOrder(Order order) => Orders.Add(order);
 
     public void PrintOrderDetails(int orderId)
     {
-        var order = orders.FirstOrDefault(o => o.Id == orderId);
+        var order = Orders.FirstOrDefault(o => o.Id == orderId);
         if (order == null)
         {
             Console.WriteLine("Указанный заказ не найден.");
             return;
         }
-
         PrintOrder(order);
     }
 
