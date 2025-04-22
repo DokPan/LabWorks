@@ -1,0 +1,24 @@
+    <Grid.RowDefinitions>
+        <RowDefinition Height="40"/>
+        <RowDefinition/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="0.5*"/>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <StackPanel Grid.ColumnSpan="3" Orientation="Horizontal">
+        <Label Content="Поиск"/>
+        <TextBox TextWrapping="Wrap" Width="400" TextChanged="TextBox_TextChanged"/>
+    </StackPanel>
+    <TreeView Grid.Row="1">
+    </TreeView>
+    <GridSplitter Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="3" Cursor="SizeWE"/>
+    <ListView Grid.Column="2" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <ListView.View>
+            <GridView>
+                <GridViewColumn/>
+            </GridView>
+        </ListView.View>
+    </ListView>
+</Grid>
