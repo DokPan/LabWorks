@@ -1,0 +1,15 @@
+<StackPanel>
+    <TextBox x:Name="LoginTextBox" Width="200" />
+    <Label Content="Поле обязательно для заполнения" Foreground="Red">
+        <Label.Style>                
+            <Style TargetType="Label">
+                <Setter Property="Visibility" Value="Hidden"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Text, ElementName=LoginTextBox}" Value="">
+                        <Setter Property="Visibility" Value="Visible"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Label.Style>
+    </Label>
+</StackPanel>
