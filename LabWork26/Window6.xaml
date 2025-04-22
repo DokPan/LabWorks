@@ -1,0 +1,17 @@
+<DockPanel>
+    <WrapPanel Background="LightSkyBlue" DockPanel.Dock="Top" Orientation="Horizontal" VerticalAlignment ="Top">
+        <Button Content="Задание 1" Name = "Task1Button" Width="200" />
+        <Button Content="Задание 2" Name = "Task2Button" Width="200" />
+        <Button Content="Задание 3" Name = "Task3Button" Width="200" />
+        <Button Content="Задание 4" Name = "Task4Button" Width="200" />
+        <Button Content="Задание 5" Name = "Task5Button" Width="200" />
+    </WrapPanel>
+    <Label Content="Подвал" Background="LightSteelBlue" DockPanel.Dock="Bottom"/>
+    <Label Content="Меню" Background="LightBlue" DockPanel.Dock="Left"/>
+    <Canvas Background="LightCyan">
+        <Image Source="/Котики.png" Width="200" Canvas.Top="10" Canvas.Left="10" />
+        <Image Source="/Котики.png" Width="200" Canvas.Top="10" Canvas.Right="10"/>
+        <Image Source="/Котики.png" Width="200" Canvas.Left="10" Canvas.Bottom="10"/>
+        <Image Source="/Котики.png" Width="200" Canvas.Right="10" Canvas.Bottom="10"/>
+    </Canvas>
+</DockPanel>
