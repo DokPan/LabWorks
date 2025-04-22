@@ -1,0 +1,7 @@
+ <StackPanel HorizontalAlignment = "Center" VerticalAlignment ="Center">
+     <Button Content="Задание 1" Name = "Task1Button" Width="200" Click="Task1Button_Click"/>
+     <Button Content="Задание 2" Name = "Task2Button" Width="200" Click="Task2Button_Click"/>
+     <Button Content="Задание 3" Name = "Task3Button" Width="200" Click="Task3Button_Click"/>
+     <Button Content="Задание 4" Name = "Task4Button" Width="200" Click="Task4Button_Click"/>
+     <Button Content="Задание 5" Name = "Task5Button" Width="200" Click="Task5Button_Click"/>
+ </StackPanel>
