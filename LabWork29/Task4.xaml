@@ -1,0 +1,20 @@
+<Grid>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="29*"/>
+        <ColumnDefinition Width="51*"/>
+    </Grid.ColumnDefinitions>
+    <CheckBox x:Name="AgreementCheckBox" Content="Согласен с условиями использования" 
+              HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+    <Button Content="Зарегистрироваться" Width="150" Height="20" Grid.Column="1">
+        <Button.Style>
+            <Style TargetType="Button">
+                <Setter Property="IsEnabled" Value="True"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding IsChecked, ElementName=AgreementCheckBox}" Value="False">
+                        <Setter Property="IsEnabled" Value="False"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Button.Style>
+    </Button>
+</Grid>
