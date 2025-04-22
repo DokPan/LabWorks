@@ -1,0 +1,6 @@
+<DockPanel>
+    <Label Content="Шапка" Background="LightSkyBlue" DockPanel.Dock="Top"/>
+    <Label Content="Подвал" Background="LightSteelBlue" DockPanel.Dock="Bottom"/>
+    <Label Content="Меню" Background="LightBlue" DockPanel.Dock="Left"/>
+    <Label Content="Контент" Background="LightCyan"/>
+</DockPanel>
