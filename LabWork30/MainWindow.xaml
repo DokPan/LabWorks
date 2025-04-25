@@ -1,0 +1,55 @@
+// Task1
+<StackPanel>
+    <Label Content="Логин:"/>
+    <TextBox/>
+    <Label Content="Email:"/>
+    <TextBox/>
+    <CheckBox Content="Я согласен на получение рассылки" Checked="CheckBox_CheckedChanged" Unchecked="CheckBox_CheckedChanged"/>
+    <Button x:Name="SubscribeButton" Content="Подписаться" IsEnabled="False"/>
+</StackPanel>
+
+// Task2
+<StackPanel>
+    <Label Content="Логин:"/>
+    <TextBox/>
+    <Label Content="Пароль:"/>
+    <PasswordBox x:Name="PasswordHidden"/>
+    <TextBox x:Name="PasswordVisible" Visibility="Collapsed"/>
+    <CheckBox Content="Показать пароль" Checked="ShowPassword_Checked" Unchecked="ShowPassword_Checked"/>
+    <Button Content="Авторизоваться"/>
+</StackPanel>
+
+// Task3, Task4
+<StackPanel>
+    <TextBox x:Name="InputTextBox" Height="100" Text="Введите текст"/>
+    <StackPanel>
+        <RadioButton Content="10" GroupName="Size" Checked="FontSizeRadioButton_Checked"/>
+        <RadioButton Content="20" GroupName="Size" Checked="FontSizeRadioButton_Checked"/>
+        <RadioButton Content="30" GroupName="Size" Checked="FontSizeRadioButton_Checked"/>
+
+        <RadioButton Content="По левому краю" GroupName="Alignment" Checked="AlignLeftRadioButton_Checked"/>
+        <RadioButton Content="По центру" GroupName="Alignment" Checked="AlignCenterRadioButton_Checked"/>
+        <RadioButton Content="По правому краю" GroupName="Alignment" Checked="AlignRightRadioButton_Checked"/>
+    </StackPanel>
+</StackPanel>
+
+// Task5
+<StackPanel>
+    <StackPanel>
+        <Label Content="Red:" Foreground="White"/>
+        <Slider x:Name="RedSlider" Minimum="0" Maximum="255" ValueChanged="ColorSlider_Changed"/>
+        <CheckBox x:Name="RedCheckBox" IsChecked="True" Checked="ColorSlider_Changed" Unchecked="ColorSlider_Changed"/>
+    </StackPanel>
+
+    <StackPanel>
+        <Label Content="Green:" Foreground="White"/>
+        <Slider x:Name="GreenSlider" Minimum="0" Maximum="255" ValueChanged="ColorSlider_Changed"/>
+        <CheckBox x:Name="GreenCheckBox" IsChecked="True" Checked="ColorSlider_Changed" Unchecked="ColorSlider_Changed"/>
+    </StackPanel>
+
+    <StackPanel>
+        <Label Content="Blue:" Foreground="White"/>
+        <Slider x:Name="BlueSlider" Minimum="0" Maximum="255" ValueChanged="ColorSlider_Changed"/>
+        <CheckBox x:Name="BlueCheckBox" IsChecked="True" Checked="ColorSlider_Changed" Unchecked="ColorSlider_Changed"/>
+    </StackPanel>
+</StackPanel>
