@@ -1,0 +1,9 @@
+<StackPanel>
+    <Label Content="Логин" HorizontalAlignment="Center"/>        
+    <TextBox Height="20" Width="150" />
+    <Label Content="Пароль" HorizontalAlignment="Center"/>
+    <TextBox Height="20" Width="150" />
+    <Label Content="Подтверждение пароля" HorizontalAlignment="Center" />
+    <TextBox Height="20" Width="150"/> 
+    <Button x:Name="OkButton" Content="Ок" Width="40" Height="20"  Click="OkButton_Click"/>
+</StackPanel>
