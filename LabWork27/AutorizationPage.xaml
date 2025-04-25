@@ -1,0 +1,8 @@
+<StackPanel>
+    <Label Content="Логин"  Width="80"/>
+    <TextBox Height="20" Width="200" />
+    <Label Content="Пароль" Width="80"/>        
+    <TextBox Height="20" Width="200" />
+    <Button x:Name="EnterButton" Content="Войти" Height="20" Width="120"  Click="EnterButton_Click" />
+    <Button x:Name="RegistrationButton" Content="Зарегистрироваться" Height="20" Width="120" Click="RegistrationButton_Click"/>
+</StackPanel>
