@@ -1,0 +1,49 @@
+<Grid>
+    <TabControl Loaded="TabControl_Loaded">
+        <TabItem Header="Основные настройки">
+            <StackPanel>
+                <GroupBox Header="О программе">
+                    <TextBlock Text="Это тестовое приложение."/>
+                </GroupBox>
+                <GroupBox Header="Цветовая тема">
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton Content="Светлая"/>
+                        <RadioButton Content="Темная"/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Размер текста">
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton Content="Мелкий"/>
+                        <RadioButton Content="Средний"/>
+                        <RadioButton Content="Большой"/>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Расширенные настройки">
+            <StackPanel>
+                <Expander Header="О программе">
+                    <TextBlock Text="Описание в Expander"/>
+                </Expander>
+                <Expander Header="Цветовая тема">
+                    <StackPanel>
+                        <RadioButton Content="Светлая"/>
+                        <RadioButton Content="Темная"/>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Размер текста">
+                    <StackPanel>
+                        <RadioButton Content="Мелкий"/>
+                        <RadioButton Content="Средний"/>
+                        <RadioButton Content="Большой"/>
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Категории игр" Height="22" Margin="-2,0,-2,0" VerticalAlignment="Bottom">
+            <ScrollViewer>
+                <StackPanel x:Name="GameStack"/>
+            </ScrollViewer>
+        </TabItem>
+    </TabControl>
+</Grid>
