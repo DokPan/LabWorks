@@ -1,0 +1,24 @@
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="Шапка" Height="100"/>
+            <RowDefinition x:Name="Контент"/>
+            <RowDefinition x:Name="Подвал" Height="50"/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="ContentFrame" Grid.Row="1" NavigationUIVisibility="Hidden"
+               ContentRendered="ContentFrame_ContentRendered"/>
+        <Border Background="LightCyan" Grid.Row="0">
+            <DockPanel>
+                <Image Source="/Котики.png" Width="80" Height="80" Margin="10"/>
+                <Button x:Name="BackButton" Content="Назад" 
+                        Click="BackButton_Click" 
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Visibility="Collapsed"
+                        Margin="10"/>
+            </DockPanel>
+        </Border>
+        <Border Grid.Row="2" Background="LightGray">
+            <TextBlock Text="Подвал приложения" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+    </Grid>
+</Window>
