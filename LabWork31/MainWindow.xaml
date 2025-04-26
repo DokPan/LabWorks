@@ -1,0 +1,87 @@
+<ScrollViewer>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Логин -->
+        <Label Content="_Логин:" Target="{Binding ElementName=LoginTextBox}" />
+        <TextBox Grid.Column="1" Name="LoginTextBox" MaxLength="30"/>
+
+        <!-- Email -->
+        <Label Grid.Row="1" Content="_Email:" Target="{Binding ElementName=EmailTextBox}" />
+        <TextBox Grid.Row="1" Grid.Column="1" Name="EmailTextBox" MaxLength="100" TextChanged="EmailTextBox_TextChanged"/>
+
+        <!-- Пароль -->
+        <Label Grid.Row="3" Content="_Пароль:" Target="{Binding ElementName=PasswordBox}" />
+        <PasswordBox Grid.Row="3" Grid.Column="1" Name="PasswordBox" PasswordChanged="PasswordBox_PasswordChanged" />
+        <TextBlock Grid.Row="4" Grid.Column="1" Name="PasswordInfoTextBlock" Foreground="Gray"/>
+
+        <!-- Подтверждение пароля -->
+        <Label Grid.Row="5" Content="По_дтверждение пароля:" />
+        <PasswordBox Grid.Row="5" Grid.Column="1" Name="ConfirmPasswordBox" PasswordChanged="ConfirmPasswordBox_PasswordChanged" />
+        <!-- Ошибки -->
+        <TextBlock Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Name="EmailErrorTextBlock" Foreground="Red" TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Name="PasswordErrorTextBlock" Foreground="Red" TextWrapping="Wrap"/>
+
+        <!-- О себе -->
+        <Label Grid.Row="7" Content="_О себе:" Target="{Binding ElementName=AboutTextBox}" />
+        <TextBox Grid.Row="7" Grid.Column="1" Name="AboutTextBox" 
+                 MaxLength="200"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap" 
+                 Height="100" 
+                 TextChanged="AboutTextBox_TextChanged"/>
+        <TextBlock Grid.Row="7" Grid.Column="1" Name="AboutInfoTextBlock" Foreground="Gray"/>
+
+        <!-- Дата рождения -->
+        <Label Grid.Row="9" Content="Дата рождения:" />
+        <StackPanel Grid.Row="9" Grid.Column="1" Orientation="Vertical">
+            <DatePicker Name="BirthdayDatePicker" DisplayDateStart="01/01/1900"
+                        SelectedDateChanged="BirthdayDatePicker_SelectedDateChanged"/>
+            <TextBlock Name="AgeTextBlock" Foreground="Gray"/>
+        </StackPanel>
+
+        <!-- Стаж -->
+        <Label Grid.Row="10" Content="Стаж:"/>
+        <StackPanel Grid.Row="10" Grid.Column="1" Orientation="Vertical">
+            <Slider Name="ExperienceSlider" Minimum="0" Maximum="50" 
+                    TickFrequency="5" TickPlacement="BottomRight"
+                    ValueChanged="ExperienceSlider_ValueChanged"/>
+            <TextBlock x:Name="ExperienceTextBlock"/>
+        </StackPanel>
+
+        <!-- Календарь и встречи -->
+        <Label Grid.Row="11" Content="Календарь встреч:"/>
+        <Calendar Name="MeetingsCalendar" Grid.Row="11" Grid.Column="1">
+            <Calendar.BlackoutDates>
+                <CalendarDateRange Start="05/01/2025" End="05/04/2025"/>
+                <CalendarDateRange Start="05/08/2025" End="05/11/2025"/>
+                <CalendarDateRange Start="05/17/2025" End="05/18/2025"/>
+                <CalendarDateRange Start="05/24/2025" End="05/25/2025"/>
+                <CalendarDateRange Start="05/31/2025" End="06/01/2025"/>
+            </Calendar.BlackoutDates>
+        </Calendar>
+
+        <StackPanel Grid.Row="12" Grid.Column="1" Orientation="Horizontal">
+            <DatePicker Name="MeetingDatePicker"/>
+            <Button Content="Добавить встречу" Click="MeetingButtonAdd_Click"/>
+        </StackPanel>
+    </Grid>
+</ScrollViewer>
