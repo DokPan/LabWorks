@@ -1,0 +1,92 @@
+<Window.Resources>
+    <ItemsPanelTemplate x:Key="ListPanelTemplate">
+        <VirtualizingStackPanel />
+    </ItemsPanelTemplate>
+
+    <ItemsPanelTemplate x:Key="TilePanelTemplate">
+        <WrapPanel />
+    </ItemsPanelTemplate>
+
+    <DataTemplate x:Key="ListItemTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Image Source="./Images/cat.jpg" Width="50" Height="50"/>
+            <TextBlock Text="{Binding Name}"/>
+            <TextBlock Text="{Binding Category}" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding Price, StringFormat='{}{0:C}'}"/>
+            <Button Content="Купить" Click="BuyButton_Click" Tag="{Binding}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TileItemTemplate" >
+        <StackPanel Width="150" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+            <Image Source="./Images/cat.jpg" Width="100" Height="100" />
+            <TextBlock Text="{Binding Name}" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding Category}" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding Price, StringFormat='{}{0:C}'}" HorizontalAlignment="Center"/>
+            <Button Content="Купить" Click="BuyButton_Click" Tag="{Binding}" />
+        </StackPanel>
+    </DataTemplate>
+</Window.Resources>
+
+<DockPanel>
+    <ListBox x:Name="CategoryListBox" Height="50" DockPanel.Dock="Top">
+        <ListBox.ItemsPanel>
+            <ItemsPanelTemplate>
+                <WrapPanel/>
+            </ItemsPanelTemplate>
+        </ListBox.ItemsPanel>
+    </ListBox>
+
+    <StackPanel DockPanel.Dock="Left">
+        <TextBlock Text="Наличие:"/>
+        <ListBox x:Name="AvailabilityListBox">
+            <CheckBox Content="В наличии" IsChecked="True"/>
+            <CheckBox Content="Под заказ: сегодня" IsChecked="True"/>
+            <CheckBox Content="Под заказ: завтра" IsChecked="True"/>
+            <CheckBox Content="Под заказ: позже" IsChecked="True"/>
+            <CheckBox Content="Нет в продаже"/>
+        </ListBox>
+        <Button Content="Применить" Click="ApplyAvailability_Click"/>
+    </StackPanel>
+
+    <StackPanel DockPanel.Dock="Right">
+        <ListBox x:Name="CartListBox" Width="200" SelectionMode="Extended" DisplayMemberPath="Name"  ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+        <Button Content="Удалить" VerticalAlignment="Bottom" Click="DeleteFromCart_Click"/>
+    </StackPanel>
+
+    <TextBlock Text="Сортировка:" DockPanel.Dock="Top"/>
+    <ComboBox x:Name="SortComboBox" HorizontalAlignment="Left" 
+              DockPanel.Dock="Top" Width="200" 
+             >
+        <ComboBoxItem Content="Сначала недорогие" IsSelected="True"/>
+        <ComboBoxItem Content="Сначала дорогие"/>
+        <ComboBoxItem Content="По новинкам"/>
+        <ComboBoxItem Content="По скидке"/>
+        <ComboBoxItem Content="По количеству отзывов"/>
+        <ComboBoxItem Content="Сначала с лучшей оценкой"/>
+    </ComboBox>
+
+    <TextBlock x:Name="ResultTextBlock" TextWrapping="Wrap" DockPanel.Dock="Top"/>
+
+    <ToggleButton x:Name="ViewToggleButton"  DockPanel.Dock="Top" 
+                  Width="100" Height="30"
+                  HorizontalAlignment="Left" 
+                  Click="ViewToggleButton_Click">
+        <ToggleButton.Style>
+            <Style TargetType="ToggleButton">
+                <Setter Property="Content" Value="Плитка" />
+                <Style.Triggers>
+                    <Trigger Property="IsChecked" Value="True">
+                        <Setter Property="Content" Value="Список" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ToggleButton.Style>
+    </ToggleButton>
+
+    <ListView x:Name="ProductListView"
+            ItemsSource="{Binding Products}" 
+            ItemTemplate="{StaticResource ListItemTemplate}" 
+            ItemsPanel="{StaticResource ListPanelTemplate}"/>
+
+</DockPanel>
