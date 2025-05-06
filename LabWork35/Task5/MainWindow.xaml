@@ -1,0 +1,22 @@
+<DockPanel>
+    <StackPanel DockPanel.Dock="Top">
+        <Button x:Name="PrintButton" 
+        Content="Печать"
+        Click="PrintButton_Click"/>
+    </StackPanel>
+    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Auto">
+        <Border BorderBrush="Black" BorderThickness="1">
+            <Canvas x:Name="CatCanvas" Width="600" Height="400">
+                <Ellipse Fill="LightBlue" Width="100" Height="100"
+                           Canvas.Left="100" Canvas.Top="50"/>
+                <Ellipse Fill="LightCyan" Width="100" Height="100"
+                         Canvas.Left="400" Canvas.Top="50"/>
+                <TextBlock Text="\/" FontSize="30"
+                            Canvas.Left="292" Canvas.Top="176"/>
+                <TextBlock Text="\__/\__/" FontSize="30"
+                           Canvas.Left="255" Canvas.Top="200"/>
+            </Canvas>
+        </Border>
+    </ScrollViewer>
+</DockPanel>
