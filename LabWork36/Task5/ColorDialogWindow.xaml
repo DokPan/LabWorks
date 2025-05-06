@@ -1,0 +1,27 @@
+<Window Title="Выбор цвета" Height="300" Width="400"
+        WindowStartupLocation="CenterOwner"
+        KeyDown="Window_KeyDown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Красный"/>
+            <Slider x:Name="RedSlider" Minimum="0" Maximum="255" TickFrequency="1" IsSnapToTickEnabled="True"/>
+            <TextBlock Text="Зелёный"/>
+            <Slider x:Name="GreenSlider" Minimum="0" Maximum="255" TickFrequency="1" IsSnapToTickEnabled="True"/>
+            <TextBlock Text="Синий"/>
+            <Slider x:Name="BlueSlider" Minimum="0" Maximum="255" TickFrequency="1" IsSnapToTickEnabled="True"/>
+        </StackPanel>
+
+        <Rectangle x:Name="ColorPreview" Grid.Row="1" Height="50"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="OK" Width="75" Click="OkButton_Click"/>
+            <Button Content="Отмена" Width="75" Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
