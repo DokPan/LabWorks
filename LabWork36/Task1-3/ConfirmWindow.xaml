@@ -1,0 +1,12 @@
+<Window Title="Подтверждение" Height="150" Width="300">
+    <DockPanel>
+        <Image Source="./Images/cat.jpg" Width="100" Height="100" HorizontalAlignment="Left" />
+        <TextBlock Text="Вы хотите закрыть приложение?" TextAlignment="Center"
+                   DockPanel.Dock="Top"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Bottom">
+            <Button Content="Да" Width="80" Height="20" IsDefault="True"
+                    Click="YesButton_Click" Background="LightGreen"/>
+            <Button Content="Нет" Width="80" Height="20" IsCancel="True" Background="LightCoral"/>
+        </StackPanel>
+    </DockPanel>
+</Window>
