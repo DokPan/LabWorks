@@ -1,0 +1,13 @@
+<Window Title="Авторизация" Height="200" Width="300"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <Label Content="Логин"/>
+        <TextBox x:Name="LoginBox"/>
+        <Label Content="Пароль"/>
+        <PasswordBox x:Name="PasswordBox"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Войти" Width="80" Click="LoginButton_Click"/>
+            <Button Content="Отмена" Width="80"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
