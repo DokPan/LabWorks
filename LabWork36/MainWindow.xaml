@@ -1,8 +1,0 @@
-<Window Title="Main Window" Height="250" Width="300"
-        WindowStartupLocation="CenterScreen">
-    <Grid>
-        <Button Content="Выбрать цвет" 
-                Click="ChooseColorButton_Click" 
-                Height="30" Width="100"/>
-    </Grid>
-</Window>
