@@ -1,0 +1,15 @@
+<DockPanel>
+    <StackPanel DockPanel.Dock="Top">
+        <Button x:Name="OpenButton" 
+            Content="Открыть"
+            Click="OpenButton_Click"/>
+        <Button x:Name="SaveButton" 
+            Content="Сохранить"
+            Click="SaveButton_Click"/>
+    </StackPanel>
+    <TextBox x:Name="InputTextBox"
+     AcceptsReturn="True"
+     AcceptsTab="True"
+     TextWrapping="Wrap"
+     VerticalScrollBarVisibility="Visible"/>
+</DockPanel>
