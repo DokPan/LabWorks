@@ -1,0 +1,23 @@
+<Window Title="MainWindow" Height="200" Width="300"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel VerticalAlignment="Center" Width="100">
+        <Button Content="Авторизоваться" Click="AuthorizationButton_Click"/>
+    </StackPanel>
+</Window>
+
+// MainWindow.xaml.cs
+/* public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+    }
+
+    private void AuthorizationButton_Click(object sender, RoutedEventArgs e)
+    {
+        this.Hide();
+        AutorizationWindow login = new();
+        login.ShowDialog();
+        this.Show();
+    }
+} */
