@@ -1,0 +1,22 @@
+ <Grid>
+     <Button Content="Назад" Width="100" Height="30" 
+             HorizontalAlignment="Center" 
+             VerticalAlignment="Center" 
+             Click="BackButton_Click"/>
+ </Grid>
+
+// Window.xaml.cs
+/*
+public partial class AdminWindow : Window
+{
+    public AdminWindow()
+    {
+        InitializeComponent();
+    }
+
+    private void BackButton_Click(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
+}
+*/
