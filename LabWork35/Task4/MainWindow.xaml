@@ -1,0 +1,19 @@
+ <DockPanel>
+     <StackPanel DockPanel.Dock="Top">
+         <Button x:Name="OpenButton" 
+         Content="Открыть"
+         Click="OpenButton_Click"/>
+     </StackPanel>
+     <ListView x:Name="ImageListView" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+         <ListView.ItemsPanel>
+             <ItemsPanelTemplate>
+                 <WrapPanel/>
+             </ItemsPanelTemplate>
+         </ListView.ItemsPanel>
+         <ListView.ItemTemplate>
+             <DataTemplate>
+                 <Image Source="{Binding}" Height="100"/>
+             </DataTemplate>
+         </ListView.ItemTemplate>
+     </ListView>
+ </DockPanel>
