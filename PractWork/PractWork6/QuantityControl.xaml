@@ -1,0 +1,7 @@
+<UserControl mc:Ignorable="d" d:DesignWidth="150">
+    <StackPanel VerticalAlignment="Top" Orientation="Horizontal">
+        <Button x:Name="MinusButton" Width="50" Content="-" Click="MinusButton_Click"/>
+        <TextBox x:Name="ValueTextBox" Width="50" Text="0" TextAlignment="Center"/>
+        <Button x:Name="PlusButton" Width="50" Content="+" Click="PlusButton_Click"/>
+    </StackPanel>
+</UserControl>
