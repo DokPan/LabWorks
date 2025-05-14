@@ -1,0 +1,40 @@
+<Window Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding Games}"
+                  SelectedItem="{Binding SelectedGame, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                  AutoGenerateColumns="False">
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="Id" Binding="{Binding IdGame}"/>
+            <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
+            <DataGridTextColumn Header="Описание" Binding="{Binding Description}"/>
+            <DataGridTextColumn Header="Категория" Binding="{Binding Category}"/>
+            <DataGridTextColumn Header="Цена" Binding="{Binding Price}"/>
+            <DataGridTextColumn Header="Скидка" Binding="{Binding Sale}"/>
+        </DataGrid.Columns>
+            </DataGrid>
+
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Название: "/>
+            <TextBox Text="{Binding SelectedGame.Name, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Text="Описание: "/>
+            <TextBox Text="{Binding SelectedGame.Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Text="Цена: "/>
+            <TextBox Text="{Binding SelectedGame.Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Text="Скидка: "/>
+            <TextBox Text="{Binding SelectedGame.Sale, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Text="Категория"/>
+            <ComboBox ItemsSource="{Binding Category}"
+                      DisplayMemberPath="Name"
+                      SelectedValuePath="Name"
+                      SelectedValue="{Binding SelectedGame.Category, Mode=TwoWay}"/>    
+        </StackPanel>
+    </Grid>
+</Window>
