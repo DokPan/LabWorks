@@ -1,0 +1,5 @@
+<UserControl d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Label x:Name="TimeLabel" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</UserControl>
