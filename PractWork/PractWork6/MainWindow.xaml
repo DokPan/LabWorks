@@ -1,0 +1,36 @@
+<Window Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ControlTemplate x:Key="RadioButtonTemplate" TargetType="RadioButton">
+            <Border CornerRadius="20" Padding="5" Background="{TemplateBinding Background}" BorderBrush="Gray" BorderThickness="1">
+                <ContentControl HorizontalAlignment="Center" 
+                                FontSize="20"
+                                VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="Background" Value="LightBlue"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="LightGray"/>
+                    <Setter Property="Foreground" Value="Gray"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+    <DockPanel>
+        <StackPanel>
+            <RadioButton Template="{StaticResource RadioButtonTemplate}" Content="Home" GroupName="Options" Checked="RadioButton_Checked"/>
+            <RadioButton Template="{StaticResource RadioButtonTemplate}" Content="Profile" GroupName="Options" Checked="RadioButton_Checked"/>
+            <RadioButton Template="{StaticResource RadioButtonTemplate}" Content="Settings" GroupName="Options" Checked="RadioButton_Checked"/>
+            <RadioButton Template="{StaticResource RadioButtonTemplate}" Content="Help" GroupName="Options" Checked="RadioButton_Checked"/>
+            <RadioButton Template="{StaticResource RadioButtonTemplate}" Content="Log out" GroupName="Options" Checked="RadioButton_Checked"/>
+        </StackPanel>
+        <StackPanel>
+            <Label Content="Цена: "/>
+            <TextBox x:Name="PriceTextBox" TextChanged="PriceTextBox_TextChanged"/>
+            <local:QuantityControl x:Name="QuantityControl"/>
+            <TextBlock x:Name="TotalPriceTextBlock" />
+        </StackPanel>
+        <local:TimeDisplayControl/>
+    </DockPanel>
+</Window>
