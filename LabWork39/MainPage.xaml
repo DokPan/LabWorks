@@ -1,0 +1,32 @@
+<VerticalStackLayout Padding="20" Spacing="10">
+    <Button Text="Задание 1" Clicked="GoToTask1"/>
+    <Button Text="Задание 2" Clicked="GoToTask2"/>
+    <Button Text="Задание 3" Clicked="GoToTask3"/>
+    <Button Text="Задание 4" Clicked="GoToTask4"/>
+    <Button Text="Задание 5" Clicked="GoToTask5"/>
+</VerticalStackLayout>
+
+# CS
+*/
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+    }
+
+    private async void GoToTask1(object sender, EventArgs e)
+        => await Navigation.PushAsync(new Task1Page());
+
+    private async void GoToTask2(object sender, EventArgs e)
+        => await Navigation.PushAsync(new Task2Page());
+    private async void GoToTask3(object sender, EventArgs e)
+        => await Navigation.PushAsync(new Task3Page());
+
+    private async void GoToTask4(object sender, EventArgs e)
+        => await Navigation.PushAsync(new Task4Page());
+
+    private async void GoToTask5(object sender, EventArgs e)
+        => await Navigation.PushAsync(new Task5Page());
+}
+/*
