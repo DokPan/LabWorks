@@ -1,0 +1,43 @@
+<ListView x:Name="ResultsListView">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <TextCell Text="{Binding Name}"
+                      Detail="{Binding Info}" />
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>
+
+# CS
+/*
+public partial class Task3Page : ContentPage
+{
+	public Task3Page()
+	{
+		InitializeComponent();
+        LoadData();
+    }
+
+    void LoadData()
+    {
+        DirectoryInfo directory = new("Y:\\МДК.01.01");
+        IEnumerable<FileInfo> Files = directory
+            .GetFiles("*", SearchOption.AllDirectories)
+            .AsEnumerable();
+
+        var files = directory.GetFiles("*", SearchOption.AllDirectories)
+            .Select(f => new { f.Name, Info = $"{f.DirectoryName}, Создано: {f.CreationTime}" })
+            .AsEnumerable();
+
+        IEnumerable<DirectoryInfo> Directories = directory
+             .GetDirectories("*", SearchOption.AllDirectories)
+             .AsEnumerable();
+
+        var folders = directory.GetDirectories("*", SearchOption.AllDirectories)
+            .Select(d => new { d.Name, Info = $"{d.FullName}, Создано: {d.CreationTime}" });
+
+        var result = files.Union(folders).ToList();
+
+        ResultsListView.ItemsSource = result;
+    }
+}
+*/
