@@ -1,0 +1,42 @@
+<ListView x:Name="ResultsListView">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <TextCell Text="{Binding Folder}"
+                      Detail="{Binding Count}" />
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>
+
+# CS
+/*
+public partial class Task5Page : ContentPage
+{
+	public Task5Page()
+	{
+		InitializeComponent();
+        LoadData();
+    }
+
+    void LoadData()
+    {
+        DirectoryInfo directory = new("Y:\\МДК.01.01");
+        IEnumerable<FileInfo> Files = directory
+            .GetFiles("*", SearchOption.AllDirectories)
+            .AsEnumerable();
+
+        IEnumerable<DirectoryInfo> Directories = directory
+             .GetDirectories("*", SearchOption.AllDirectories)
+             .AsEnumerable();
+
+        var result = Directories.GroupJoin(Files,
+            d => d.FullName,
+            f => f.DirectoryName,
+            (d, files) => new
+            {
+                Folder = d.FullName,
+                Count = $"{files.Count()} файлов"
+            }).ToList();
+
+        ResultsListView.ItemsSource = result;
+    }
+}*/
