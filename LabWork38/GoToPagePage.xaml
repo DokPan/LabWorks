@@ -1,0 +1,27 @@
+<StackLayout>
+    <ListView x:Name="FilesListView"
+          ItemsSource="{Binding DisplayedFiles}"
+          HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Label Text="{Binding Name}" FontAttributes="Bold"/>
+                        <Label Text="{Binding Length}" FontSize="12"/>
+                        <Label Text="{Binding CreationDate}" FontSize="12"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+        <Button x:Name="FirstPageButton" Text="|&lt;" Clicked="OnFirstPageClicked" />
+        <Button Text="&lt;" x:Name="BackButton" Clicked="OnPreviousPageClicked"/>
+        <Entry x:Name="PageEntry" WidthRequest="50" TextChanged="OnPageEntryTextChanged" />
+        <Button Text=">" x:Name="NextButton" Clicked="OnNextPageClicked"/>
+        <Button x:Name="LastPageButton" Text=">|" Clicked="OnLastPageClicked" />
+    </StackLayout>
+
+    <Label x:Name="InfoLabel" HorizontalOptions="Center"/>
+</StackLayout>
