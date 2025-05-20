@@ -1,0 +1,631 @@
+<Window Title="Task3" Height="450" Width="800">
+    <Canvas Width="600" Height="300" Background="LightBlue">
+        <Ellipse Width="48" Height="45" Canvas.Left="354" Canvas.Top="79" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="8.533"/>
+                    <RotateTransform Angle="110.336"/>
+                    <TranslateTransform X="-1.71" Y="-5.049"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="29.055" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF310F00" Offset="1"/>
+                    <GradientStop Color="#FFFFEADA" Offset="0.303"/>
+                    <GradientStop Color="#FFFF5312" Offset="1"/>
+                    <GradientStop Color="#FFFF7E46" Offset="0.639"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Width="48" Height="45" Canvas.Left="273" Canvas.Top="74" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="11.232"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-4.468"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="29.055" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFF5312" Offset="0"/>
+                    <GradientStop Color="#FFFFEADA" Offset="0.697"/>
+                    <GradientStop Color="#FF310F00"/>
+                    <GradientStop Color="#FFFF7E46" Offset="0.361"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Rectangle Width="600" Height="80" Canvas.Top="220" Fill="Green"/>
+        <Ellipse Height="33" Width="119" Fill="#FFE09164" Canvas.Left="179" Canvas.Top="238" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.906"/>
+                    <SkewTransform AngleX="-32.856" AngleY="9.167"/>
+                    <RotateTransform Angle="-5.68"/>
+                    <TranslateTransform X="-14.407" Y="7.307"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse Height="30" Width="122" Fill="#FFFBB288" Canvas.Left="159" Canvas.Top="247" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.906"/>
+                    <SkewTransform AngleX="-32.856" AngleY="9.167"/>
+                    <RotateTransform Angle="-5.68"/>
+                    <TranslateTransform X="-14.407" Y="7.307"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse Height="30" Width="39" Canvas.Left="255" Canvas.Top="253" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Ellipse.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FFD28458" Offset="0"/>
+                    <GradientStop Color="#FFF1D0BC" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Height="30" Width="39" Canvas.Left="232" Canvas.Top="257" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Ellipse.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FFFBB288" Offset="0"/>
+                    <GradientStop Color="#FFFFCEB1" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Height="87" Width="55" Canvas.Left="287" Canvas.Top="141">
+            <Ellipse.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="OrangeRed" Offset="0"/>
+                    <GradientStop Color="#FFDE6436" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Height="76" Width="37" Canvas.Left="308" Canvas.Top="214" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="19.747"/>
+                    <RotateTransform Angle="-19.035"/>
+                    <TranslateTransform Y="-6.641"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="0.2,1">
+                    <GradientStop Color="#FFD03C04" Offset="0"/>
+                    <GradientStop Color="#FFEDBDA0" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Height="100" Width="200" Canvas.Left="147" Canvas.Top="177" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-16.113"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-28.888"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="OrangeRed" Offset="0"/>
+                    <GradientStop Color="#FFFBB288" Offset="1.5"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Height="30" Width="42" Fill="#FFD0A68E" Canvas.Left="326" Canvas.Top="256" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Ellipse Height="49" Width="142" Canvas.Left="56" Canvas.Top="245" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFE5413"/>
+                    <GradientStop Color="#FF8E2800" Offset="0.975"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-7.989"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-7.86"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+
+        </Ellipse>
+        <Rectangle Width="6" Height="61" Canvas.Left="211" Canvas.Top="164" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-24.812"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Ellipse Width="90" Height="90" Canvas.Left="147" Canvas.Top="183" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="9.664"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="7.663"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="OrangeRed" Offset="0"/>
+                    <GradientStop Color="#FFFBB288" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Height="76" Width="37" Canvas.Left="273" Canvas.Top="215" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="19.747"/>
+                    <RotateTransform Angle="-19.035"/>
+                    <TranslateTransform Y="-6.641"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="0.2,1">
+                    <GradientStop Color="OrangeRed" Offset="0"/>
+                    <GradientStop Color="#FFFFD3B9" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Height="30" Width="42" Fill="#FFFDC09D" Canvas.Left="290" Canvas.Top="257" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Ellipse Height="87" Width="55" Canvas.Left="257" Canvas.Top="140">
+            <Ellipse.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="OrangeRed" Offset="0"/>
+                    <GradientStop Color="#FFFF723D" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Height="96" Width="110" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="277" Canvas.Top="80" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="3.109"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <LinearGradientBrush StartPoint="0,0.1" EndPoint="0.2,1">
+                    <GradientStop Color="OrangeRed" Offset="0"/>
+                    <GradientStop Color="#FFFDC09D" Offset="0.66"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Width="13" Height="7" Fill="#FF480000" Canvas.Left="328" Canvas.Top="148"/>
+        <Ellipse Width="26" Height="4" Fill="#FF480000" Canvas.Left="302" Canvas.Top="141" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="21.127"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse Width="25" Height="4" Fill="#FF480000" Canvas.Left="343" Canvas.Top="143" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-9.211"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Rectangle Width="6" Height="61" Canvas.Left="250" Canvas.Top="149" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-13.522"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Ellipse Width="10" Height="10" Fill="#FFFFE6CD" Canvas.Left="292" Canvas.Top="77"/>
+        <Ellipse Width="10" Height="10" Fill="#FFFFE6CD" Canvas.Left="364" Canvas.Top="78" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Width="6" Height="42" Canvas.Left="228" Canvas.Top="154" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-20.709"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="6" Height="53" Canvas.Left="331" Canvas.Top="80" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.759"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="5" Height="44" Canvas.Left="332" Canvas.Top="97" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.637"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="4" Height="61" Canvas.Left="333" Canvas.Top="77" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-88.876"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="5" Height="36" Canvas.Left="332" Canvas.Top="76" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.637"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="2" Height="29" Canvas.Left="365" Canvas.Top="147" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-121.696"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="2" Height="23" Canvas.Left="292" Canvas.Top="144" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-47.012"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="4" Height="19" Canvas.Left="285" Canvas.Top="130" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-28.591"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="4" Height="19" Canvas.Left="374" Canvas.Top="138" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="40.457"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="3" Height="12" Canvas.Left="328" Canvas.Top="156" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-50.311"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="3" Height="12" Canvas.Left="335" Canvas.Top="156" RenderTransformOrigin="0.795,0.907" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="68.178"/>
+                    <TranslateTransform X="-4.385" Y="-1.363"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="5" Height="9" Canvas.Left="349" Canvas.Top="130" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="65.243"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="5" Height="9" Canvas.Left="319" Canvas.Top="130" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="120.099"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="4" Height="22" Canvas.Left="136" Canvas.Top="236" RenderTransformOrigin="0.578,1.018" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-4.129"/>
+                    <TranslateTransform X="-1.888" Y="-0.063"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Ellipse Height="45" Width="123" Canvas.Left="57" Canvas.Top="251" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Ellipse.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="OrangeRed" Offset="0"/>
+                    <GradientStop Color="#FFFFA05D" Offset="0.65"/>
+                    <GradientStop Color="#FF250F00" Offset="0.9"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Rectangle Width="5" Height="32" Canvas.Left="74" Canvas.Top="258" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-3.157"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="5" Height="32" Canvas.Left="92" Canvas.Top="262" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="2.724"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="5" Height="32" Canvas.Left="110" Canvas.Top="251" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="6.523"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Ellipse Width="10" Height="10" Fill="#FFFFE6CD" Canvas.Left="162" Canvas.Top="264" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Width="4" Height="32" Canvas.Left="140" Canvas.Top="263" RenderTransformOrigin="0.578,1.018" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-10.419"/>
+                    <TranslateTransform X="-1.888" Y="-0.063"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="4" Height="32" Canvas.Left="169" Canvas.Top="196" RenderTransformOrigin="0.578,1.018" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-10.419"/>
+                    <TranslateTransform X="-1.888" Y="-0.063"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="7" Height="48" Canvas.Left="189" Canvas.Top="192" RenderTransformOrigin="0.578,1.018" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="3.117"/>
+                    <TranslateTransform X="-1.888" Y="-0.063"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="4" Height="32" Canvas.Left="212" Canvas.Top="209" RenderTransformOrigin="0.578,1.018" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="28.102"/>
+                    <TranslateTransform X="-1.888" Y="-0.063"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="4" Height="23" Canvas.Left="203" Canvas.Top="225" RenderTransformOrigin="0.578,1.018" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="11.238"/>
+                    <TranslateTransform X="-1.888" Y="-0.063"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="4" Height="22" Canvas.Left="164" Canvas.Top="224" RenderTransformOrigin="0.578,1.018" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-19.067"/>
+                    <TranslateTransform X="-1.888" Y="-0.063"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="4" Height="10" Canvas.Left="105" Canvas.Top="242" RenderTransformOrigin="0.578,1.018" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-4.129"/>
+                    <TranslateTransform X="-1.888" Y="-0.063"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="4" Height="29" Canvas.Left="296" Canvas.Top="164" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-79.584"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="4" Height="29" Canvas.Left="294" Canvas.Top="183" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-87.819"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="4" Height="29" Canvas.Left="270" Canvas.Top="168" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-62.145"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="3" Height="23" Canvas.Left="277" Canvas.Top="208" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-62.145"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="3" Height="24" Canvas.Left="273" Canvas.Top="148" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="#FF520000" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-34.358"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="2" Height="26" Canvas.Left="352" Canvas.Top="156" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="White" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-34.358"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="2" Height="26" Canvas.Left="313" Canvas.Top="105" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="White" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-30.553"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="2" Height="26" Canvas.Left="309" Canvas.Top="149" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="White" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="62.704"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="2" Height="26" Canvas.Left="312" Canvas.Top="154" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="White" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="50.889"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="2" Height="15" Canvas.Left="322" Canvas.Top="115" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="White" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-9.433"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="2" Height="15" Canvas.Left="350" Canvas.Top="115" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="White" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="17.225"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="2" Height="26" Canvas.Left="357" Canvas.Top="104" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="White" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="21.695"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Width="2" Height="26" Canvas.Left="358" Canvas.Top="153" RenderTransformOrigin="0.5,0.5" RadiusX="3" RadiusY="3" Fill="White" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-48.848"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+    </Canvas>
+</Window>
