@@ -1,0 +1,6 @@
+<Shell
+    <ShellContent
+        Title="Фильтрация файлов"
+        ContentTemplate="{DataTemplate local:TextFilterPage}"
+        Route="TextFilterPage"/>    
+</Shell>
