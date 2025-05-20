@@ -1,0 +1,39 @@
+<ListView x:Name="ResultsListView">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <TextCell Text="{Binding Extension}" 
+                      Detail="{Binding Summary}" />
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>
+
+  # CS
+ /*
+ public partial class Task1Page : ContentPage
+{
+	public Task1Page()
+	{
+		InitializeComponent();
+        LoadData();
+    }
+
+    void LoadData()
+    {
+        DirectoryInfo directory = new("Y:\\МДК.01.01");
+        IEnumerable<FileInfo> Files = directory
+            .GetFiles("*", SearchOption.AllDirectories)
+            .AsEnumerable();
+
+        var result = Files
+            .GroupBy(f => f.Extension.ToLower())
+            .Select(g => new
+            {
+                Extension = g.Key,
+                Summary = $"Всего: {g.Sum(f => f.Length)} байт, Минимальное: {g.Min(f => f.Length)}, Максимальное: {g.Max(f => f.Length)}, Количество: {g.Count()}"
+            })
+            .ToList();
+
+        ResultsListView.ItemsSource = result;
+    } 
+}
+ */
