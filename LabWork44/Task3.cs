@@ -1,0 +1,50 @@
+using Microsoft.Data.Sqlite;
+
+CreateDatabase("MyGamesStore.sqlite");
+
+void CreateDatabase(string databaseName)
+{
+    var connectionString = $"Data Source = {databaseName}";
+
+    using SqliteConnection connection = new(connectionString);
+    connection.Open();
+    var query = @"
+CREATE TABLE Game (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Title TEXT NOT NULL,
+    Description TEXT NOT NULL,
+    PublicationYear INTEGER NOT NULL,
+    Price REAL NOT NULL
+);
+
+CREATE TABLE Review (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    GameId INTEGER NOT NULL,
+    User TEXT NOT NULL,
+    Comment TEXT NOT NULL,
+    PublicationDate TEXT NOT NULL,
+    FOREIGN KEY (GameId) REFERENCES Game(Id)
+);
+
+INSERT INTO Game (Title, Description, PublicationYear, Price) VALUES
+('Cyberpunk 2077', 'Игра в открытом мире, действие которой происходит в мрачном будущем.', 2020, 59.99),
+('God of War', 'Экшен-приключенческая игра, в которой Кратос и его сын Атрейс исследуют мифологию.', 2018, 49.99),
+('The Witcher 3: Wild Hunt', 'Открытый RPG, в котором Геральт из Ривии ищет свою пропавшую дочь.', 2015, 39.99),
+('Dark Souls III', 'Экшен-RPG, известная своим сложным игровым процессом и глубокой мифологией.', 2016, 39.99),
+('Hollow Knight', 'Метроидвания в стиле экшен-приключения, действие которой происходит в красиво нарисованном мире.', 2017, 14.99);
+
+INSERT INTO Review (GameId, User, Comment, PublicationDate) VALUES
+(1, 'Пользователь1', 'Удивительная игра с потрясающей графикой!', '2025-05-01'),
+(1, 'Пользователь2', 'Сложная, но вознаграждающая игра.', '2025-05-02'),
+(2, 'Пользователь3', 'Шедевр повествования.', '2025-05-03'),
+(2, 'Пользователь4', 'Боевая система плавная и увлекательная.', '2025-05-04'),
+(3, 'Пользователь5', 'Лучшая RPG, в которую я когда-либо играл!', '2025-05-05'),
+(3, 'Пользователь6', 'Мир настолько погружающий.', '2025-05-06'),
+(4, 'Пользователь7', 'Очень сложно, но стоит того.', '2025-05-07'),
+(4, 'Пользователь8', 'Мифология невероятно глубокая.', '2025-05-08'),
+(5, 'Пользователь9', 'Красивый художественный стиль и отличный игровой процесс.', '2025-05-09'),
+(5, 'Пользователь10', 'Обязательно к игре для фанатов инди-игр.', '2025-05-10');";
+
+    SqliteCommand command = new(query, connection);
+    command.ExecuteNonQuery();
+}
