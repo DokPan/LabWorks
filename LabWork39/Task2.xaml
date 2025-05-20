@@ -1,0 +1,37 @@
+<ListView x:Name="ResultsListView">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <TextCell Text="{Binding Period}"
+                      Detail="{Binding Count}" />
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>
+
+# CS
+/*
+public partial class Task2Page : ContentPage
+{
+    public Task2Page()
+    {
+        InitializeComponent();
+        LoadData();
+    }
+
+    void LoadData()
+    {
+        DirectoryInfo directory = new("Y:\\МДК.01.01");
+        IEnumerable<FileInfo> Files = directory
+            .GetFiles("*", SearchOption.AllDirectories)
+            .AsEnumerable();
+
+        var result = Files
+            .GroupBy(f => new { f.CreationTime.Year, Month = f.CreationTime.ToString("MMMM") })
+            .Select(g => new
+            {
+                Period = $"{g.Key.Year} {g.Key.Month}",
+                Count = $"{g.Count()} files"
+            }).ToList();
+
+        ResultsListView.ItemsSource = result;
+    }
+}*/
