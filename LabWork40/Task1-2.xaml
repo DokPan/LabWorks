@@ -1,0 +1,81 @@
+<StackPanel>
+    <StackPanel Orientation="Horizontal">
+        <!-- Круги -->
+        <Ellipse Width="100" Height="100" Fill="LightGray" Stroke="DarkGray" StrokeThickness="2" Margin="5"/>
+        <!-- Сплошной -->
+
+        <Ellipse Width="100" Height="100" Margin="5">
+            <Ellipse.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="HotPink" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <Ellipse Width="100" Height="100" Margin="5">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="DarkViolet" Offset="0"/>
+                    <GradientStop Color="Violet" Offset="1"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <Ellipse Width="100" Height="100" Margin="5">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/images/cat.jpg"/>
+            </Ellipse.Fill>
+        </Ellipse>
+    </StackPanel>
+    <StackPanel Orientation="Horizontal">
+        <!-- Прямоугольники -->
+        <Rectangle Width="100" Height="80" Fill="Crimson" Margin="5"/>
+        <Rectangle Width="100" Height="80" Margin="5">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="Yellow" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Width="100" Height="80" Margin="5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/images/cat.jpg"/>
+            </Rectangle.Fill>
+            <Rectangle.RadiusX>10</Rectangle.RadiusX>
+            <Rectangle.RadiusY>10</Rectangle.RadiusY>
+        </Rectangle>
+
+        <!-- С контурами -->
+        <Rectangle Width="100" Height="80" Stroke="Chocolate" StrokeThickness="2" Fill="Bisque" Margin="5"/>
+        <Rectangle Width="100" Height="80" Stroke="DarkBlue"  StrokeThickness="2" Fill="DarkMagenta" Margin="5" StrokeDashArray="4 2"/>
+    </StackPanel>
+    <StackPanel Orientation="Horizontal">
+        <Button Content="Масштаб" Width="100" RenderTransformOrigin="0.75,0.75" Margin="10" Click="Button_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="12.5" Y="2.495"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+        <Slider Width="100" RenderTransformOrigin="0.5,0.5" Margin="10">
+            <Slider.RenderTransform>
+                <RotateTransform Angle="45"/>
+            </Slider.RenderTransform>
+        </Slider>
+
+        <TextBox Text="Комбинированно" RenderTransformOrigin="0.5,0.5" Margin="10">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                    <RotateTransform Angle="30"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+    </StackPanel>
+</StackPanel>
