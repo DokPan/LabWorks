@@ -1,0 +1,57 @@
+<VerticalStackLayout>
+    <Entry x:Name="SearchEntry" Placeholder="Введите часть имени файла" TextChanged="OnTextChanged"/>
+    
+    <!--<Entry x:Name="sizeEntry" Placeholder="Введите размер в байтах" Keyboard="Numeric" TextChanged="OnFilterChanged"/>
+    <HorizontalStackLayout>
+        <RadioButton Content="Больше или равно" GroupName="sizeFilter" x:Name="GreaterRadio" CheckedChanged="OnFilterChanged"/>
+        <RadioButton Content="Меньше или равно" GroupName="sizeFilter" x:Name="LessRadio" CheckedChanged="OnFilterChanged"/>
+        <RadioButton Content="Все файлы" GroupName="sizeFilter" x:Name="AllRadio" IsChecked="True" CheckedChanged="OnFilterChanged"/>
+    </HorizontalStackLayout>-->
+
+    <StackLayout Orientation="Horizontal">
+        <CheckBox x:Name="MinCheck" CheckedChanged="OnFilteredChanged"/>
+        <Entry x:Name="MinEntry" Placeholder="Минимальный размер" WidthRequest="300" Keyboard="Numeric" TextChanged="OnFilteredChanged"/>            
+    </StackLayout>
+
+    <StackLayout Orientation="Horizontal">
+        <CheckBox x:Name="MaxCheck" CheckedChanged="OnFilteredChanged"/>
+        <Entry x:Name="MaxEntry" Placeholder="Максимальный размер" WidthRequest="300" Keyboard="Numeric" TextChanged="OnFilteredChanged"/>
+    </StackLayout>
+    
+    <StackLayout Orientation="Horizontal">
+        <Label x:Name="DateEntry" Text="Показать файлы, изменённые после"/>
+        <DatePicker x:Name="DatePicker" DateSelected="DateFilterChanged"/>
+        <CheckBox x:Name="AfterCheckBox" CheckedChanged="DateFilterChanged"/>
+    </StackLayout>
+    
+    <Label x:Name="InfoLabel" Text="Показано 0 из 0 записей"/>
+    <Button Text="Сбросить фильтр" Clicked="OnResetClicked"/>
+    <ScrollView VerticalScrollBarVisibility="Always" HeightRequest="400">
+        <ListView x:Name="FileListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Name}"/>
+                                <Label Text="{Binding Extension}" Grid.Column="1"/>
+                                <Label Text="{Binding FullName}" Grid.Column="2"/>
+                                <Label Text="{Binding Length}" Grid.Column="3"/>
+                                <Label Text="{Binding CreationTime}" Grid.Column="4"/>
+                                <Label Text="{Binding LastWriteTime}" Grid.Column="5"/>
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ScrollView>
+</VerticalStackLayout>
