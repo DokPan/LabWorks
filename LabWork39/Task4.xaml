@@ -1,0 +1,41 @@
+<ListView x:Name="ResultsListView">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <TextCell Text="{Binding}"/>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>
+
+# CS
+/*
+public partial class Task4Page : ContentPage
+{
+	public Task4Page()
+	{
+		InitializeComponent();
+        LoadData();
+    }
+
+    void LoadData()
+    {
+        DirectoryInfo directory = new("C:\\Temp\\ispp34");
+        IEnumerable<FileInfo> Files = directory
+            .GetFiles("*", SearchOption.AllDirectories)
+            .AsEnumerable();
+
+        IEnumerable<DirectoryInfo> Directories = directory
+             .GetDirectories("*", SearchOption.AllDirectories)
+             .AsEnumerable();
+
+        var folders = directory.GetDirectories("*", SearchOption.AllDirectories)
+                         .Where(d => d.CreationTime.Date == DateTime.Today)
+                         .ToList();
+
+        var result = folders.Join(Files,
+                                  d => d.FullName,
+                                  f => f.DirectoryName,
+                                  (d, f) => f.FullName).ToList();
+
+        ResultsListView.ItemsSource = result;
+    }
+}*/
