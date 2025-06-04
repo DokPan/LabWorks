@@ -1,0 +1,31 @@
+<Grid>
+    <Grid.ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition/>
+</Grid.ColumnDefinitions>
+
+<StackPanel x:Name="SideMenu" Width="50" Background="Gray" Orientation="Vertical"/>
+<Button Grid.Column="1" Content="☰" Width="40" Height="40" Click="Hamburger_Click"/>
+</Grid>
+
+# CS
+/*public partial class Task1 : Window
+{
+    private bool isExpanded = false;
+
+    public Task1()
+    {
+        InitializeComponent();
+    }
+    private void Hamburger_Click(object sender, RoutedEventArgs e)
+    {
+        DoubleAnimation widthAnimation = new()
+        {
+            Duration = new Duration(TimeSpan.FromSeconds(1)),
+            To = isExpanded ? 50 : 200
+        };
+
+        SideMenu.BeginAnimation(WidthProperty, widthAnimation);
+        isExpanded = !isExpanded;
+    }
+}*/
