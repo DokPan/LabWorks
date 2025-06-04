@@ -1,0 +1,21 @@
+ <Grid>
+     <DataGrid x:Name="UsersDataGrid"
+               CanUserAddRows="False" CanUserDeleteRows="False"
+               AlternatingRowBackground="LightGreen" 
+               GridLinesVisibility="Horizontal"
+               AutoGenerateColumns="False">
+         <DataGrid.Columns>
+             <DataGridHyperlinkColumn Header="Адрес" Binding="{Binding Address}" />
+             <DataGridTextColumn Header="Логин" Binding="{Binding Login}" />
+             <DataGridTextColumn Header="Пароль" Binding="{Binding HiddenPassword}" IsReadOnly="True" />
+             <DataGridCheckBoxColumn Header="Архивный" Binding="{Binding IsArchived}" />
+             <DataGridTemplateColumn>
+                 <DataGridTemplateColumn.CellTemplate>
+                     <DataTemplate>
+                         <Button Content="Скопировать пароль" Click="CopyPasswordButton_Click"/>
+                     </DataTemplate>
+                 </DataGridTemplateColumn.CellTemplate>
+             </DataGridTemplateColumn>
+         </DataGrid.Columns>
+     </DataGrid>
+ </Grid>
