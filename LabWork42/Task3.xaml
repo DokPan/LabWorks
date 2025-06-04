@@ -1,0 +1,41 @@
+<StackPanel>
+    <MediaElement Name="VideoPlayer"
+                  Height="250"
+                  Source="/Video/VID_20250523_074124_126.mp4"
+                  MediaEnded="VideoPlayer_MediaEnded"
+                  DockPanel.Dock="Top" UnloadedBehavior="Manual"/>
+    <StackPanel Orientation="Horizontal" Margin="10" Height="44" Width="300">
+        <Button Content="Системный звук" Click="PlaySystemSound_Click" Margin="5"/>
+        <Button Content="Файл WAV" Click="PlayFileSound_Click" Margin="5"/>
+    </StackPanel>
+</StackPanel>
+
+#CS
+/*
+public partial class Task3 : Window
+{
+    public Task3()
+    {
+        InitializeComponent();
+        VideoPlayer.Play();
+    }
+
+    private void VideoPlayer_MediaEnded(object sender, RoutedEventArgs e)
+    {
+        VideoPlayer.Position = TimeSpan.Zero;
+        VideoPlayer.Play();
+    }
+
+    private void PlaySystemSound_Click(object sender, RoutedEventArgs e)
+    {
+        SystemSounds.Exclamation.Play();
+    }
+
+    private void PlayFileSound_Click(object sender, RoutedEventArgs e)
+    {
+        string FileName = "Загрузки/VID_20250523_074124_126.mp4";
+        SoundPlayer player = new SoundPlayer(FileName);
+        player.Play();
+    }
+}
+*/
