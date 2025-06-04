@@ -1,0 +1,67 @@
+<StackPanel>
+    <StackPanel Orientation="Horizontal" Margin="10">
+        <Button Content="Загрузить изображение" Click="LoadImage_Click" Margin="5"/>
+        <ComboBox x:Name="ColorBox" Width="100" Margin="5" SelectionChanged="ColorBox_SelectionChanged">
+            <ComboBoxItem Content="Черный"/>
+            <ComboBoxItem Content="Красный"/>
+            <ComboBoxItem Content="Синий"/>
+        </ComboBox>
+        <Slider x:Name="PenSizeSlider" Minimum="1" Maximum="10" Width="100" Margin="5" ValueChanged="PenSizeSlider_ValueChanged"/>
+    </StackPanel>
+    <InkCanvas x:Name="inkCanvas" Background="White" Height="300" />
+</StackPanel>
+
+# CS
+/*
+public partial class Task1 : Window
+{
+    public Task1()
+    {
+        InitializeComponent();
+        inkCanvas.DefaultDrawingAttributes = new DrawingAttributes()
+        {
+            Color = Colors.Black,
+            Width = 2,
+            Height = 2
+        };
+    }
+
+    private void LoadImage_Click(object sender, RoutedEventArgs e)
+    {
+        var dialog = new OpenFileDialog() { Filter = "Image Files|*.jpg;*.png;*.bmp" };
+        if (dialog.ShowDialog() == true)
+        {
+            var img = new ImageBrush(new BitmapImage(new System.Uri(dialog.FileName)));
+            inkCanvas.Background = img;
+        }
+    }
+
+    private void ColorBox_SelectionChanged(object sender, RoutedEventArgs e)
+    {
+        if (ColorBox.SelectedItem is ComboBoxItem selectedItem)
+        {
+            switch (selectedItem.Content.ToString())
+            {
+                case "Красный":
+                    inkCanvas.DefaultDrawingAttributes.Color = Colors.Red;
+                    break;
+                case "Синий":
+                    inkCanvas.DefaultDrawingAttributes.Color = Colors.Blue;
+                    break;
+                default:
+                    inkCanvas.DefaultDrawingAttributes.Color = Colors.Black;
+                    break;
+            }
+        }
+    }
+
+    private void PenSizeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+    {
+        if (inkCanvas != null)
+        {
+            inkCanvas.DefaultDrawingAttributes.Width = e.NewValue;
+            inkCanvas.DefaultDrawingAttributes.Height = e.NewValue;
+        }
+    }
+}
+*/
